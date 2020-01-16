@@ -1,6 +1,6 @@
 import 'dart:math';
 
-// Section 1
+// Section 1 - Optional Parameters
 
 class Bicycle {
   int cadence;
@@ -26,7 +26,7 @@ class Bicycle {
   String toString() => 'Bicycle: $speed mph';
 }
 
-// Section 2
+// Section 2 - Create a Factory
 
 class Rectangle {
   Point origin;
@@ -42,7 +42,7 @@ class Rectangle {
   String toString() => 'Origin: (${origin.x}, ${origin.y}), Width: $width, height: $height'; 
 }
 
-// Section 3
+// Section 3 - Implement Interface
 
 abstract class Shape {
   num get area;
@@ -70,30 +70,30 @@ Shape shapeFactory(String type) {
   throw 'Can\'t create $type';
 }
 
-// Section 4
+// Section 4 - Functional Programming
 
 String scream(int length) => "A${'a' * length}";
 
 void main() {
-//   Section 1
+//   Section 1 - Optional Parameters
   print("Section 1");
   var bike = Bicycle(2, 1);
   bike.speedUp(5);
   print(bike);
   
-//   Section 2
+//   Section 2 - Create a Factory
   print("Section 2");
   print(Rectangle(origin: const Point(10, 20), width: 100, height: 200));
   print(Rectangle(origin: const Point(10, 10)));
   
-//   Section 3
+//   Section 3 - Implement Interface
   print("Section 3");
   final circle = shapeFactory('circle');
   final square = shapeFactory('square');
   print(circle.area);
   print(square.area);
   
-//   Section 4
+//   Section 4 - Functional Programming
   print("Section 4");
   final values = [1, 2, 3, 4, 5];
   values.skip(2).map(scream).forEach(print);
